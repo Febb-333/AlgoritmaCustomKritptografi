@@ -121,9 +121,9 @@ def enkripsi_plat_cipher(plaintext):
 
     return ciphertext, steps_log
 
-def deskripsi_plat_cipher(ciphertext):
+def dekripsi_plat_cipher(ciphertext):
     """
-    Proses Deskripsi:
+    Proses Dekripsi:
     1. Parsing string menjadi chunk (Plat + Angka).
     2. Normalisasi Plat (bL -> BL).
     3. Cari kombinasi Plat & Angka di database untuk dapatkan Huruf asli.
@@ -194,16 +194,16 @@ with tab1:
         else:
             st.warning("Mohon masukkan teks terlebih dahulu.")
 
-# --- TAB DESKRIPSI ---
+# --- TAB DEKRIPSI ---
 with tab2:
-    st.subheader("Proses Deskripsi")
+    st.subheader("Proses Dekripsi")
     st.write("Mengembalikan Kode Plat menjadi Teks Asli.")
     
     input_cipher = st.text_input("Masukkan Ciphertext:", placeholder="Contoh: bL4bK5pA9aG6dB10bK5")
     
-    if st.button("Deskripsi Sekarang"):
+    if st.button("Dekripsi Sekarang"):
         if input_cipher:
-            hasil_dec, logs_dec = deskripsi_plat_cipher(input_cipher)
+            hasil_dec, logs_dec = dekripsi_plat_cipher(input_cipher)
             
             st.success("Berhasil!")
             st.markdown(f"### Plaintext: **`{hasil_dec}`**")
