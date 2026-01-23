@@ -172,7 +172,7 @@ with st.expander("📖 Lihat Tabel Referensi (Kunci)"):
     st.dataframe(df_ref, use_container_width=True)
 
 # Tab Navigasi
-tab1, tab2 = st.tabs(["🔐 ENKRIPSI", "🔓 DESKRIPSI"])
+tab1, tab2 = st.tabs(["🔐 ENKRIPSI", "🔓 DEKRIPSI"])
 
 # --- TAB ENKRIPSI ---
 with tab1:
